@@ -1,0 +1,39 @@
+name: RSSHub Docs Sync
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        repository: DIYgod/RSSHub
+        ref: master
+
+    - name: Install pnpm
+      run: |
+        npm install -g pnpm
+
+    - name: Build RSSHub Docs
+      working-directory: website
+      run: |
+        pnpm install
+        pnpm build
+
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: gh-pages
+        build_dir: website/build
+        keep_history: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
