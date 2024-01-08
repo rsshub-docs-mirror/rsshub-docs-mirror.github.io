@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="zh" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-install/config" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.0">
+<title data-rh="true">配置 | RSSHub</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.rsshub.app/zh/img/logo.png"><meta data-rh="true" name="twitter:image" content="https://docs.rsshub.app/zh/img/logo.png"><meta data-rh="true" property="og:url" content="https://docs.rsshub.app/zh/install/config"><meta data-rh="true" property="og:locale" content="zh"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="zh"><meta data-rh="true" name="docsearch:language" content="zh"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="配置 | RSSHub"><meta data-rh="true" name="description" content="通过设置环境变量来配置 RSSHub"><meta data-rh="true" property="og:description" content="通过设置环境变量来配置 RSSHub"><link data-rh="true" rel="icon" href="/zh/img/logo.png"><link data-rh="true" rel="canonical" href="https://docs.rsshub.app/zh/install/config"><link data-rh="true" rel="alternate" href="https://docs.rsshub.app/zh/install/config" hreflang="zh"><link data-rh="true" rel="alternate" href="https://docs.rsshub.app/install/config" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.rsshub.app/install/config" hreflang="x-default"><link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-322PG1X4EL"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-322PG1X4EL",{})</script>
+
+
+<link rel="preconnect" href="https://umami.diygod.dev">
+<script async defer="defer" src="https://umami.diygod.dev/script.js" data-website-id="be1761be-7547-49d5-91b8-5c97c8f7cec7" data-auto-track></script>
+
+<link rel="icon" href="/zh/img/logo.png">
+<link rel="manifest" href="/zh/manifest.json">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="/zh/img/apple-touch-icon.png">
+<link rel="mask-icon" href="/zh/img/safari-pinned-tab.svg" color="#F5712C">
+<meta name="msapplication-TileImage" content="/zh/img/logo.png">
+<meta name="msapplication-TileColor" content="#ffffff"><link rel="stylesheet" href="/zh/assets/css/styles.d64ffe1f.css">
+<script src="/zh/assets/js/runtime~main.83d2ab96.js" defer="defer"></script>
+<script src="/zh/assets/js/main.d106030b.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="跳到主要内容"><a class="skipToContent_sThx" href="#__docusaurus_skipToContent_fallback">跳到主要内容</a></div><nav aria-label="主导航" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="切换导航栏" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/zh/"><div class="navbar__logo"><img src="/zh/img/logo.png" alt="RSSHub" class="themedComponent_koeu themedComponent--light_D4et"><img src="/zh/img/logo.png" alt="RSSHub" class="themedComponent_koeu themedComponent--dark__Swk"></div><b class="navbar__title text--truncate">RSSHub</b></a><a class="navbar__item navbar__link" href="/zh/">指南</a><a class="navbar__item navbar__link" href="/zh/routes">路由</a><a class="navbar__item navbar__link" href="/zh/joinus/quick-start">参与我们</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/zh/install">部署</a><a class="navbar__item navbar__link" href="/zh/support">支持 RSSHub</a></div><div class="navbar__items navbar__items--right"><div class="navbarSearchContainer_AKaY"><div id="docsearch"></div></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_Eg8Y"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>中文</a><ul class="dropdown__menu"><li><a href="/zh/install/config" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="zh">中文</a></li><li><a href="/install/config" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li></ul></div><a href="https://github.com/DIYgod/RSSHub" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="toggle_jpoJ colorModeToggle_XT76"><button class="clean-btn toggleButton_dWlv toggleButtonDisabled_e9MD" type="button" disabled="" title="切换浅色/暗黑模式（当前为浅色模式）" aria-label="切换浅色/暗黑模式（当前为浅色模式）" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_vApi"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_r86n"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_dLvo"><div class="docsWrapper_yUut"><button aria-label="回到顶部" class="clean-btn theme-back-to-top-button backToTopButton_AjPx" type="button"></button><div class="docRoot_nfHZ"><aside class="theme-doc-sidebar-container docSidebarContainer_ER09"><div class="sidebarViewport_uwaF"><div class="sidebar_BZqR"><nav aria-label="文档侧边栏" class="menu thin-scrollbar menu_HwXf"><ul class="theme-doc-sidebar-menu menu__list"><span class="roomForCarbon_eMDD"><span></span></span><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/zh/install/">部署</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/zh/install/config">配置</a></li></ul></nav></div></div></aside><main class="docMainContainer_cGVL"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_CD9v"><div class="docItemContainer_fh9r"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_n691" aria-label="页面路径"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="主页面" class="breadcrumbs__link" href="/zh/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_jhEr"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">配置</span><meta itemprop="position" content="1"></li></ul></nav><div class="tocCollapsible_BvIv theme-doc-toc-mobile tocMobile_xYtX"><button type="button" class="clean-btn tocCollapsibleButton_z1cn">本页总览</button></div><div class="theme-doc-markdown markdown"><h1>配置</h1>
+<p>通过设置环境变量来配置 RSSHub</p>
+<h2 class="anchor anchorWithStickyNavbar_eil9" id="网络配置">网络配置<a href="#网络配置" class="hash-link" aria-label="网络配置的直接链接" title="网络配置的直接链接">​</a></h2>
+<p><code>PORT</code>: 监听端口，默认为 <code>1200</code></p>
+<p><code>SOCKET</code>: 监听 Unix Socket，默认 <code>null</code></p>
+<p><code>LISTEN_INADDR_ANY</code>: 是否允许公网连接，默认 <code>1</code></p>
+<p><code>REQUEST_RETRY</code>: 请求失败重试次数，默认 <code>2</code></p>
+<p><code>REQUEST_TIMEOUT</code>: 请求超时毫秒数，默认 <code>3000</code></p>
+<p><code>UA</code>: 用户代理，默认为随机用户代理用户代理（macOS 上的 Chrome）</p>
+<p><code>NO_RANDOM_UA</code>: 是否禁用随机用户代理，默认 <code>null</code></p>
+<h2 class="anchor anchorWithStickyNavbar_eil9" id="跨域请求">跨域请求<a href="#跨域请求" class="hash-link" aria-label="跨域请求的直接链接" title="跨域请求的直接链接">​</a></h2>
+<p>RSSHub 默认对跨域请求限制为当前连接所在的域名，即不允许跨域。可以通过 <code>ALLOW_ORIGIN: *</code> 或者 <code>ALLOW_ORIGIN: www.example.com</code> 以对跨域访问进行修改。</p>
+<h2 class="anchor anchorWithStickyNavbar_eil9" id="缓存配置">缓存配置<a href="#缓存配置" class="hash-link" aria-label="缓存配置的直接链接" title="缓存配置的直接链接">​</a></h2>
+<p>RSSHub 支持 <code>memory</code> 和 <code>redis</code> 两种缓存方式</p>
+<p><code>CACHE_TYPE</code>: 缓存类型，可为 <code>memory</code> 和 <code>redis</code>，设为空可以禁止缓存，默认为 <code>memory</code></p>
+<p><code>CACHE_EXPIRE</code>: 路由缓存过期时间，单位为秒，默认 <code>5 * 60</code></p>
+<p><code>CACHE_CONTENT_EXPIRE</code>: 内容缓存过期时间，每次访问会重新计算过期时间，单位为秒，默认 <code>1 * 60 * 60</code></p>
+<p><code>REDIS_URL</code>: Redis 连接地址（redis 缓存类型时有效），默认为 <code>redis://localhost:6379/</code></p>
+<p><code>MEMORY_MAX</code>: 最大缓存数量（memory 缓存类型时有效），默认 <code>256</code></p>
+<h2 class="anchor anchorWithStickyNavbar_eil9" id="代理配置">代理配置<a href="#代理配置" class="hash-link" aria-label="代理配置的直接链接" title="代理配置的直接链接">​</a></h2>
+<p>部分路由反爬严格，可以配置使用代理抓取。</p>
+<p>可通过<strong>代理 URI <strong>或</strong>代理选项</strong>或<strong>反向代理</strong>三种方式来配置代理。</p>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="代理-uri">代理 URI<a href="#代理-uri" class="hash-link" aria-label="代理 URI的直接链接" title="代理 URI的直接链接">​</a></h3>
+<p><code>PROXY_URI</code>: 代理 URI，支持 socks4, socks5（本地查询域名的 SOCKS5，不推荐使用）, socks5h（传域名的 SOCKS5，推荐使用，以防止 DNS 污染或 DNS 泄露）, http, https，具体以 <a href="https://www.npmjs.com/package/socks-proxy-agent" target="_blank" rel="noopener noreferrer">socks-proxy-agent</a> NPM 包的支持为准，也可参考 <a href="https://daniel.haxx.se/blog/2020/05/26/curl-ootw-socks5/" target="_blank" rel="noopener noreferrer">curl 中 SOCKS 代理协议的用法</a>。</p>
+<blockquote>
+<p>代理 URI 的格式为：</p>
+<ul>
+<li><code>{protocol}://{host}:{port}</code></li>
+<li><code>{protocol}://{username}:{password}@{host}:{port}</code> （带身份凭证）</li>
+</ul>
+<p>一些示例：</p>
+<ul>
+<li><code>socks4://127.0.0.1:1080</code></li>
+<li><code>socks5h://user:pass@127.0.0.1:1080</code> （用户名为 <code>user</code>, 密码为 <code>pass</code>）</li>
+<li><code>socks://127.0.0.1:1080</code> （protocol 为 socks 时表示 <code>socks5h</code>）</li>
+<li><code>http://127.0.0.1:8080</code></li>
+<li><code>http://user:pass@127.0.0.1:8080</code></li>
+<li><code>https://127.0.0.1:8443</code></li>
+</ul>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="代理选项">代理选项<a href="#代理选项" class="hash-link" aria-label="代理选项的直接链接" title="代理选项的直接链接">​</a></h3>
+<p><code>PROXY_PROTOCOL</code>: 使用代理，支持 socks，http，https</p>
+<p><code>PROXY_HOST</code>: 代理服务器域名或 IP</p>
+<p><code>PROXY_PORT</code>: 代理服务器端口</p>
+<p><code>PROXY_AUTH</code>: 给代理服务器的身份验证凭证，<code>Proxy-Authorization: Basic ${process.env.PROXY_AUTH}</code></p>
+<p><code>PROXY_URL_REGEX</code>: 启用代理的 URL 正则表达式，默认全部开启 <code>.*</code></p>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="反向代理">反向代理<a href="#反向代理" class="hash-link" aria-label="反向代理的直接链接" title="反向代理的直接链接">​</a></h3>
+<div class="theme-admonition theme-admonition-warning admonition_hiN6 alert alert--warning"><div class="admonitionHeading_id5B"><span class="admonitionIcon_vZbd"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>注意</div><div class="admonitionContent_DEQY"><p>这种代理方式无法代理包含 cookie 的请求。</p></div></div>
+<p><code>REVERSE_PROXY_URL</code>: 反向代理地址，RSSHub 将会使用该地址作为前缀来发起请求，例如 <code>https://proxy.example.com/?target=</code>，对 <code>https://google.com</code> 发起的请求将被自动转换为 <code>https://proxy.example.com/?target=https%3A%2F%2Fgoogle.com</code></p>
+<p>你可以使用 Cloudflare Workers 来搭建一个简易的反向代理，例如：</p>
+<div class="language-js codeBlockContainer__et_ theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_w7FX"><pre tabindex="0" class="prism-code language-js codeBlock_60yo thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_Vomy"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">addEventListener</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">&#x27;fetch&#x27;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token parameter">event</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  event</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">respondWith</span><span class="token punctuation" style="color:#393A34">(</span><span class="token function" style="color:#d73a49">handleRequest</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">event</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">request</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token keyword" style="color:#00009f">async</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">function</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">handleRequest</span><span class="token punctuation" style="color:#393A34">(</span><span class="token parameter">request</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> url </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token class-name">URL</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">request</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">url</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token keyword" style="color:#00009f">let</span><span class="token plain"> target </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> url</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">searchParams</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">get</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">&#x27;target&#x27;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token keyword control-flow" style="color:#00009f">if</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">(</span><span class="token operator" style="color:#393A34">!</span><span class="token plain">target</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword control-flow" style="color:#00009f">return</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token class-name">Response</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">&#x27;Hello, this is Cloudflare Proxy Service. To proxy your requests, please use the &quot;target&quot; URL parameter.&#x27;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"> </span><span class="token keyword control-flow" style="color:#00009f">else</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    target </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">decodeURIComponent</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">target</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword" style="color:#00009f">const</span><span class="token plain"> newRequest </span><span class="token operator" style="color:#393A34">=</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">new</span><span class="token plain"> </span><span class="token class-name">Request</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">target</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token literal-property property" style="color:#36acaa">headers</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> request</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">headers</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token literal-property property" style="color:#36acaa">method</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> request</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">method</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token literal-property property" style="color:#36acaa">body</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> request</span><span class="token punctuation" style="color:#393A34">.</span><span class="token property-access">body</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token keyword control-flow" style="color:#00009f">return</span><span class="token plain"> </span><span class="token keyword control-flow" style="color:#00009f">await</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">fetch</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">newRequest</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre><div class="buttonGroup_UuIe"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_uvkg" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_rW9e"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_HkRG"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_eil9" id="用户认证">用户认证<a href="#用户认证" class="hash-link" aria-label="用户认证的直接链接" title="用户认证的直接链接">​</a></h2>
+<p><code>protected_route.js</code> 内的路由将启用 HTTP Basic Authentication 认证</p>
+<p>支持该认证协议的阅读器，在添加源地址时，需要在源地址前添加认证信息，例如：<code>http://usernam3:passw0rd@rsshub.app/protected/rsshub/routes</code>。</p>
+<p>对于不支持该认证协议的阅读器，请参考 <a href="#fang-wen-kong-zhi-pei-zhi">访问控制配置</a>。</p>
+<p><code>HTTP_BASIC_AUTH_NAME</code>: Http basic authentication 用户名，默认为 <code>usernam3</code>，请务必修改</p>
+<p><code>HTTP_BASIC_AUTH_PASS</code>: Http basic authentication 密码，默认为 <code>passw0rd</code>，请务必修改</p>
+<h2 class="anchor anchorWithStickyNavbar_eil9" id="访问控制配置">访问控制配置<a href="#访问控制配置" class="hash-link" aria-label="访问控制配置的直接链接" title="访问控制配置的直接链接">​</a></h2>
+<p>RSSHub 支持使用访问密钥 / 码，允许清单和拒绝清单三种方式进行访问控制。开启任意选项将会激活全局访问控制，没有访问权限将会导致访问被拒绝。同时可以通过 <code>ALLOW_LOCALHOST: true</code> 赋予所有本地 IP 访问权限。</p>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="允许清单拒绝清单">允许清单/拒绝清单<a href="#允许清单拒绝清单" class="hash-link" aria-label="允许清单/拒绝清单的直接链接" title="允许清单/拒绝清单的直接链接">​</a></h3>
+<ul>
+<li>
+<p><code>ALLOWLIST</code>: 允许清单，设置允许清单后拒绝清单无效</p>
+</li>
+<li>
+<p><code>DENYLIST</code>: 拒绝清单</p>
+</li>
+</ul>
+<p>允许清单/拒绝清单支持 IP、路由和 UA，模糊匹配，设置多项时用英文逗号 <code>,</code> 隔开，例如 <code>ALLOWLIST=1.1.1.1,2.2.2.2,/qdaily/column/59</code></p>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="访问密钥--码">访问密钥 / 码<a href="#访问密钥--码" class="hash-link" aria-label="访问密钥 / 码的直接链接" title="访问密钥 / 码的直接链接">​</a></h3>
+<ul>
+<li><code>ACCESS_KEY</code>: 访问密钥，用于直接访问所有路由或者生成访问码</li>
+</ul>
+<p>访问码为 访问密钥 + 路由 共同生成的 md5，例如：</p>
+<table><thead><tr><th>访问密钥</th><th>路由</th><th>生成过程</th><th>访问码</th></tr></thead><tbody><tr><td>ILoveRSSHub</td><td>/qdaily/column/59</td><td>md5(&#x27;/qdaily/column/59&#x27; + &#x27;ILoveRSSHub&#x27;)</td><td>0f820530128805ffc10351f22b5fd121</td></tr></tbody></table>
+<ul>
+<li>
+<p>此时可以通过 <code>code</code> 访问路由，例如：<code>https://rsshub.app/qdaily/column/59?code=0f820530128805ffc10351f22b5fd121</code></p>
+</li>
+<li>
+<p>或使用访问密钥 <code>key</code> 直接访问所有路由，例如：<code>https://rsshub.app/qdaily/column/59?key=ILoveRSSHub</code></p>
+</li>
+</ul>
+<p>访问密钥 / 码与允许清单/拒绝清单的访问控制关系如下：</p>
+<table><thead><tr><th></th><th>正确访问密钥 / 码</th><th>错误访问密钥 / 码</th><th>无访问密钥 / 码</th></tr></thead><tbody><tr><td>在允许清单中</td><td>✅</td><td>✅</td><td>✅</td></tr><tr><td>在拒绝清单中</td><td>✅</td><td>❌</td><td>❌</td></tr><tr><td>无允许清单/拒绝清单</td><td>✅</td><td>❌</td><td>❌</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_eil9" id="日志配置">日志配置<a href="#日志配置" class="hash-link" aria-label="日志配置的直接链接" title="日志配置的直接链接">​</a></h2>
+<p><code>DEBUG_INFO</code>: 是否在首页显示路由信息。值为非 <code>true</code> <code>false</code> 时，在请求中带上参数 <code>debug</code> 开启显示，例如：<code>https://rsshub.app/?debug=value_of_DEBUG_INFO</code> 。默认 <code>true</code></p>
+<p><code>LOGGER_LEVEL</code>: 指明输出到 console 和日志文件的日志的最大 <a href="https://github.com/winstonjs/winston#logging-levels" target="_blank" rel="noopener noreferrer">等级</a>，默认 <code>info</code></p>
+<p><code>NO_LOGFILES</code>: 是否禁用日志文件输出，默认 <code>false</code></p>
+<p><code>SHOW_LOGGER_TIMESTAMP</code>: 在控制台输出中显示日志时间戳，默认 <code>false</code></p>
+<p><code>SENTRY</code>: <a href="https://sentry.io" target="_blank" rel="noopener noreferrer">Sentry</a> dsn，用于错误追踪</p>
+<p><code>SENTRY_ROUTE_TIMEOUT</code>: 路由耗时超过此毫秒值上报 Sentry，默认 <code>3000</code></p>
+<h2 class="anchor anchorWithStickyNavbar_eil9" id="图片处理">图片处理<a href="#图片处理" class="hash-link" aria-label="图片处理的直接链接" title="图片处理的直接链接">​</a></h2>
+<div class="theme-admonition theme-admonition-tip admonition_hiN6 alert alert--success"><div class="admonitionHeading_id5B"><span class="admonitionIcon_vZbd"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>新配置方式</div><div class="admonitionContent_DEQY"><p>我们正在试验新的，更灵活的配置方式。如果有需要，请转到 <a href="/zh/parameter#%E5%A4%9A%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86">通用参数 -&gt; 多媒体处理</a> 了解更多。</p><p>在使用新配置时，请将下方环境变量留空。否则默认图片模版会继续遵循下方配置。</p></div></div>
+<p><code>HOTLINK_TEMPLATE</code>: 用于处理描述中图片的 URL，绕过防盗链等限制，留空不生效。用法参考 <a href="https://github.com/DIYgod/RSSHub/issues/2769" target="_blank" rel="noopener noreferrer">#2769</a>。可以使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL#Properties" target="_blank" rel="noopener noreferrer">URL</a> 的所有属性（加上后缀 <code>_ue</code> 则会对其进行 URL 编码），格式为 JS 变量模板。例子：<code>${protocol}//${host}${pathname}</code>, <code>https://i3.wp.com/${host}${pathname}</code>, <code>https://images.weserv.nl?url=${href_ue}</code></p>
+<p><code>HOTLINK_INCLUDE_PATHS</code>: 限制需要处理的路由，只有匹配成功的路由会被处理，设置多项时用英文逗号 <code>,</code> 隔开。若不设置，则所有路由都将被处理</p>
+<p><code>HOTLINK_EXCLUDE_PATHS</code>: 排除不需处理的路由，所有匹配成功的路由都不被处理，设置多项时用英文逗号 <code>,</code> 隔开。可单独使用，也可用于排除已被前者包含的路由。若不设置，则没有任何路由会被过滤</p>
+<div class="theme-admonition theme-admonition-tip admonition_hiN6 alert alert--success"><div class="admonitionHeading_id5B"><span class="admonitionIcon_vZbd"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>路由匹配模式</div><div class="admonitionContent_DEQY"><p><code>HOTLINK_INCLUDE_PATHS</code> 和 <code>HOTLINK_EXCLUDE_PATHS</code> 均匹配路由根路径及其所有递归子路径，但并非子字符串匹配。注意必须以 <code>/</code> 开头，且结尾不需要 <code>/</code>。</p><p>例：<code>/example</code>, <code>/example/sub</code> 和 <code>/example/anthoer/sub/route</code> 均可被 <code>/example</code> 匹配，但 <code>/example_route</code> 不会被匹配。</p><p>也可带有路由参数，如 <code>/weibo/user/2612249974</code> 也是合法的。</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_eil9" id="功能特性">功能特性<a href="#功能特性" class="hash-link" aria-label="功能特性的直接链接" title="功能特性的直接链接">​</a></h2>
+<div class="theme-admonition theme-admonition-tip admonition_hiN6 alert alert--success"><div class="admonitionHeading_id5B"><span class="admonitionIcon_vZbd"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>测试特性</div><div class="admonitionContent_DEQY"><p>这个板块控制的是一些新特性的选项，他们都是<strong>默认关闭</strong>的。如果有需要请阅读对应说明后按需开启</p></div></div>
+<p><code>ALLOW_USER_HOTLINK_TEMPLATE</code>: <a href="/zh/parameter#%E5%A4%9A%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86">通用参数 -&gt; 多媒体处理</a>特性控制</p>
+<p><code>FILTER_REGEX_ENGINE</code>: 控制 <a href="/zh/parameter#%E5%86%85%E5%AE%B9%E8%BF%87%E6%BB%A4">通用参数 -&gt; 内容过滤</a> 使用的正则引擎。可选<code>[re2, regexp]</code>，默认<code>re2</code>。我们推荐公开实例不要调整这个选项，这个选项目前主要用于向后兼容。</p>
+<p><code>ALLOW_USER_SUPPLY_UNSAFE_DOMAIN</code>: 允许用户为路由提供域名作为参数。建议公共实例不要调整此选项，开启后可能会导致 <a href="https://owasp.org/www-community/attacks/Server_Side_Request_Forgery" target="_blank" rel="noopener noreferrer">服务端请求伪造（SSRF）</a></p>
+<h2 class="anchor anchorWithStickyNavbar_eil9" id="其他应用配置">其他应用配置<a href="#其他应用配置" class="hash-link" aria-label="其他应用配置的直接链接" title="其他应用配置的直接链接">​</a></h2>
+<p><code>DISALLOW_ROBOT</code>: 阻止搜索引擎收录，默认开启，设置 false 或 0 关闭</p>
+<p><code>ENABLE_CLUSTER</code>: 是否开启集群模式，默认 <code>false</code></p>
+<p><code>NODE_ENV</code>: 是否显示错误输出，默认 <code>production</code> （即关闭输出）</p>
+<p><code>NODE_NAME</code>: 节点名，用于负载均衡，识别当前节点</p>
+<p><code>PUPPETEER_WS_ENDPOINT</code>: 用于 puppeteer.connect 的浏览器 websocket 链接，见 <a href="https://zhaoqize.github.io/puppeteer-api-zh_CN/#?product=Puppeteer&amp;show=api-browserwsendpoint" target="_blank" rel="noopener noreferrer">browserWSEndpoint</a></p>
+<p><code>CHROMIUM_EXECUTABLE_PATH</code>: Chromium（或 Chrome）的可执行路径。若 puppeteer 没有下载捆绑的 Chromium（主动跳过下载或体系架构为 arm/arm64），设置此项可启用 puppeteer。或者，偏好 Chrome 而不是 Chromium 时，此项也很有用。<strong>注意</strong>：<code>PUPPETEER_WS_ENDPOINT</code> 被设置时，此项不生效；仅 在手动部署时有用，对于 Docker 部署，请改用 <code>chromium-bundled</code> 版本镜像。</p>
+<p><code>TITLE_LENGTH_LIMIT</code>: 限制输出标题的字节长度，一个英文字符的长度为 1 字节，部分语言如中文，日文，韩文或阿拉伯文等，统一算作 2 字节，默认 <code>150</code></p>
+<p><code>OPENAI_API_KEY</code>: OpenAI API Key，用于使用 ChatGPT 总结文章</p>
+<p><code>OPENAI_MODEL</code>: OpenAI 模型名称，用于使用 ChatGPT 总结文章，默认<code>gpt-3.5-turbo-16k</code>，详见 <a href="https://platform.openai.com/docs/models/overview" target="_blank" rel="noopener noreferrer">OpenAI API 文档</a></p>
+<p><code>OPENAI_TEMPERATURE</code>: OpenAI 温度参数，用于使用 ChatGPT 总结文章，默认<code>0.2</code>，详见 <a href="https://platform.openai.com/docs/api-reference/chat/create#chat-create-temperature" target="_blank" rel="noopener noreferrer">OpenAI API 文档</a></p>
+<p><code>OPENAI_MAX_TOKENS</code>: OpenAI 最大 token 数，用于使用 ChatGPT 总结文章，默认<code>null</code>，详见 <a href="https://platform.openai.com/docs/api-reference/chat/create#chat-create-max_tokens" target="_blank" rel="noopener noreferrer">OpenAI API 文档</a></p>
+<p><code>OPENAI_API_ENDPOINT</code>: OpenAI API 地址，用于使用 ChatGPT 总结文章，默认<code>https://api.openai.com/v1</code>，详见 <a href="https://platform.openai.com/docs/api-reference/chat" target="_blank" rel="noopener noreferrer">OpenAI API 文档</a></p>
+<p><code>OPENAI_PROMPT</code>: OpenAI 提示语，用于使用 ChatGPT 总结文章，详见 <a href="https://platform.openai.com/docs/api-reference/chat" target="_blank" rel="noopener noreferrer">OpenAI API 文档</a></p>
+<p><code>REMOTE_CONFIG</code>: 远程配置地址，用于动态更新配置，地址应返回一个环境变量名作为 key 的 JSON，会在应用启动时加载并合并本地配置，与本地配置冲突时以远程配置为准，但请注意部分基础配置项不支持从远程获取</p>
+<h2 class="anchor anchorWithStickyNavbar_eil9" id="route-specific-configurations">部分 RSS 模块配置<a href="#route-specific-configurations" class="hash-link" aria-label="部分 RSS 模块配置的直接链接" title="部分 RSS 模块配置的直接链接">​</a></h2>
+<div class="theme-admonition theme-admonition-tip admonition_hiN6 alert alert--success"><div class="admonitionHeading_id5B"><span class="admonitionIcon_vZbd"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>提示</div><div class="admonitionContent_DEQY"><p>此处信息不完整。完整配置请参考路由对应的文档和 <code>lib/config.js</code>。</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="4399-论坛">4399 论坛<a href="#4399-论坛" class="hash-link" aria-label="4399 论坛的直接链接" title="4399 论坛的直接链接">​</a></h3>
+<ul>
+<li><code>GAME_4399</code>: 对应登录后的 cookie 值，获取方式：<!-- -->
+<ol>
+<li>在 4399 首页登录。</li>
+<li>打开开发者工具，切换到 Network 面板，刷新</li>
+<li>查找<code>www.4399.com</code>的访问请求，点击请求，在右侧 Headers 中找到 Cookie.</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="bilibili">bilibili<a href="#bilibili" class="hash-link" aria-label="bilibili的直接链接" title="bilibili的直接链接">​</a></h3>
+<p>用于用户关注动态系列路由</p>
+<ul>
+<li><code>BILIBILI_COOKIE_{uid}</code>: 对应 uid 的 b 站用户登录后的 Cookie 值，<code>{uid}</code> 替换为 uid，如 <code>BILIBILI_COOKIE_2267573</code>，获取方式：<!-- -->
+<ol>
+<li>打开 <a href="https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&amp;type=8" target="_blank" rel="noopener noreferrer">https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_new?uid=0&amp;type=8</a></li>
+<li>打开控制台，切换到 Network 面板，刷新</li>
+<li>点击 dynamic_new 请求，找到 Cookie</li>
+<li>视频和专栏，UP 主粉丝及关注只要求 <code>SESSDATA</code> 字段，动态需复制整段 Cookie</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="bitbucket">Bitbucket<a href="#bitbucket" class="hash-link" aria-label="Bitbucket的直接链接" title="Bitbucket的直接链接">​</a></h3>
+<p><a href="https://developer.atlassian.com/cloud/bitbucket/rest/intro/#basic-auth" target="_blank" rel="noopener noreferrer">Basic auth with App passwords</a></p>
+<ul>
+<li><code>BITBUCKET_USERNAME</code>: 你的 Bitbucket 用户名</li>
+<li><code>BITBUCKET_PASSWORD</code>: 你的 Bitbucket 密码</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="btbyr">BTBYR<a href="#btbyr" class="hash-link" aria-label="BTBYR的直接链接" title="BTBYR的直接链接">​</a></h3>
+<ul>
+<li><code>BTBYR_HOST</code>: 支持 ipv4 访问的 BTBYR 镜像，默认为原站 <code>https://bt.byr.cn/</code>。</li>
+<li><code>BTBYR_COOKIE</code>: 注册用户登录后的 Cookie 值，获取方式：<!-- -->
+<ol>
+<li>登录后打开网站首页</li>
+<li>打开控制台，刷新</li>
+<li>找到 <code>https://bt.byr.cn/index.php</code> 请求</li>
+<li>找到请求头中的 Cookie</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="bupt">BUPT<a href="#bupt" class="hash-link" aria-label="BUPT的直接链接" title="BUPT的直接链接">​</a></h3>
+<ul>
+<li><code>BUPT_PORTAL_COOKIE</code>: 登录后获得的 Cookie 值，获取方式<!-- -->
+<ol>
+<li>打开 <a href="https://webapp.bupt.edu.cn/wap/login.html?redirect=https://" target="_blank" rel="noopener noreferrer">https://webapp.bupt.edu.cn/wap/login.html?redirect=https://</a>&gt;并登录</li>
+<li>无视掉报错，并打开 <a href="https://webapp.bupt.edu.cn/extensions/wap/news/list.html?p-1&amp;type=xnxw" target="_blank" rel="noopener noreferrer">https://webapp.bupt.edu.cn/extensions/wap/news/list.html?p-1&amp;type=xnxw</a></li>
+<li>打开控制台，刷新</li>
+<li>找到 <code>https://webapp.bupt.edu.cn/extensions/wap/news/list.html?p-1&amp;type=xnxw</code> 请求</li>
+<li>找到请求头中的 Cookie</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="civitai">Civitai<a href="#civitai" class="hash-link" aria-label="Civitai的直接链接" title="Civitai的直接链接">​</a></h3>
+<ul>
+<li><code>CIVITAI_COOKIE</code>: Civitai 登录后的 cookie 值</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="discourse">Discourse<a href="#discourse" class="hash-link" aria-label="Discourse的直接链接" title="Discourse的直接链接">​</a></h3>
+<ul>
+<li><code>DISCOURSE_CONFIG_{id}</code>: 一个 Discourse 驱动的论坛的配置信息， <code>id</code> 可自由设定为任意数字或字符串。值应形如<code>{&quot;link&quot;:link,&quot;key&quot;:key}</code>。其中：</li>
+<li><code>link</code>：论坛的链接。</li>
+<li><code>key</code>访问论坛 API 的密钥，可参考 <a href="https://pastebin.com/YbLCgdWW" target="_blank" rel="noopener noreferrer">此处代码</a> 以获取。需要确保有足够权限访问对应资源。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="discuz">Discuz<a href="#discuz" class="hash-link" aria-label="Discuz的直接链接" title="Discuz的直接链接">​</a></h3>
+<ul>
+<li><code>DISCUZ_COOKIE_{cid}</code>: 某 Discuz 驱动的论坛，用户注册后的 Cookie 值，cid 可自由设定，取值范围 [00, 99], 使用 discuz 通用路由时，通过指定 cid 来调用该 cookie</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="disqus">Disqus<a href="#disqus" class="hash-link" aria-label="Disqus的直接链接" title="Disqus的直接链接">​</a></h3>
+<p><a href="https://disqus.com/api/applications/" target="_blank" rel="noopener noreferrer">申请地址</a></p>
+<ul>
+<li><code>DISQUS_API_KEY</code>: Disqus API</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="e-hentai">E-Hentai<a href="#e-hentai" class="hash-link" aria-label="E-Hentai的直接链接" title="E-Hentai的直接链接">​</a></h3>
+<ul>
+<li><code>EH_IPB_MEMBER_ID</code>: E-Hentai 账户登录后 cookie 的 <code>ipb_member_id</code> 值</li>
+<li><code>EH_IPB_PASS_HASH</code>: E-Hentai 账户登录后 cookie 的 <code>ipb_pass_hash</code> 值</li>
+<li><code>EH_SK</code>: E-Hentai 账户登录后 cookie 中的<code>sk</code>值</li>
+<li><code>EH_IGNEOUS</code>: ExHentai 账户登录后 cookie 中的<code>igneous</code>值。若设置此值，RSS 数据将全部从里站获取</li>
+<li><code>EH_STAR</code>: E-Hentai 账户获得捐赠等级后将出现该 cookie。若设置此值，图片访问量限制将与账号关联而非 IP 地址</li>
+<li><code>EH_IMG_PROXY</code>: 封面代理访问地址。若设置此值，封面图链接将被替换为以此值开头。使用 ExHentai 时，封面图需要有 Cookie 才能访问，在一些阅读软件上没法显示封面，可以使用此值搭配一个加 Cookie 的代理服务器实现阅读软件无 Cookie 获取封面图。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="fantia">Fantia<a href="#fantia" class="hash-link" aria-label="Fantia的直接链接" title="Fantia的直接链接">​</a></h3>
+<ul>
+<li><code>FANTIA_COOKIE</code>: 登录后的 <code>cookie</code> , 可以在控制台中查看请求头获取。如果不填会导致部分需要登录后才能阅读的帖子获取异常</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="gitee">Gitee<a href="#gitee" class="hash-link" aria-label="Gitee的直接链接" title="Gitee的直接链接">​</a></h3>
+<p><a href="https://gitee.com/api/v5/swagger" target="_blank" rel="noopener noreferrer">申请地址</a></p>
+<ul>
+<li><code>GITEE_ACCESS_TOKEN</code>: Gitee 私人令牌</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="github">GitHub<a href="#github" class="hash-link" aria-label="GitHub的直接链接" title="GitHub的直接链接">​</a></h3>
+<p><a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreferrer">申请地址</a></p>
+<ul>
+<li><code>GITHUB_ACCESS_TOKEN</code>: GitHub Access Token</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="google-fonts">Google Fonts<a href="#google-fonts" class="hash-link" aria-label="Google Fonts的直接链接" title="Google Fonts的直接链接">​</a></h3>
+<p><a href="https://developers.google.com/fonts/docs/developer_api#a_quick_example" target="_blank" rel="noopener noreferrer">申请地址</a></p>
+<ul>
+<li><code>GOOGLE_FONTS_API_KEY</code>: API key</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="instagram">Instagram<a href="#instagram" class="hash-link" aria-label="Instagram的直接链接" title="Instagram的直接链接">​</a></h3>
+<ul>
+<li><code>IG_USERNAME</code>: Instagram 用户名（仅 Private API）</li>
+<li><code>IG_PASSWORD</code>: Instagram 密码（仅 Private API）</li>
+<li><code>IG_PROXY</code>: Instagram 代理 URL（仅 Private API，可选）</li>
+<li><code>IG_COOKIE</code>: Instagram 登录后的 Cookie（仅 Cookie）</li>
+</ul>
+<p>注意，暂<strong>不支持</strong>两步验证。</p>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="iwara">Iwara<a href="#iwara" class="hash-link" aria-label="Iwara的直接链接" title="Iwara的直接链接">​</a></h3>
+<ul>
+<li><code>IWARA_USERNAME</code>: Iwara 用户名</li>
+<li><code>IWARA_PASSWORD</code>: Iwara 密码</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="lastfm">Last.fm<a href="#lastfm" class="hash-link" aria-label="Last.fm的直接链接" title="Last.fm的直接链接">​</a></h3>
+<p><a href="https://www.last.fm/api/" target="_blank" rel="noopener noreferrer">申请地址</a></p>
+<ul>
+<li><code>LASTFM_API_KEY</code>: Last.fm API Key</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="lightnovelus">LightNovel.us<a href="#lightnovelus" class="hash-link" aria-label="LightNovel.us的直接链接" title="LightNovel.us的直接链接">​</a></h3>
+<ul>
+<li><code>SECURITY_KEY</code>: 在token中security_key的值，请去除%22，例如<code>{%22security_key%22:%223cXXXX%22}</code>,只需要3cXXXX部分</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="mastodon">Mastodon<a href="#mastodon" class="hash-link" aria-label="Mastodon的直接链接" title="Mastodon的直接链接">​</a></h3>
+<p>用户时间线路由：访问 <code>https://mastodon.example/settings/applications</code> 申请（替换掉 <code>mastodon.example</code>）。需要 <code>read:search</code> 权限</p>
+<ul>
+<li><code>MASTODON_API_HOST</code>: API 请求的实例，仅域名，不包括 <code>http://</code> 或 <code>https://</code> 协议头</li>
+<li><code>MASTODON_API_ACCESS_TOKEN</code>: 用户 access token, 申请应用后，在应用配置页可以看到申请者的 access token</li>
+<li><code>MASTODON_API_ACCT_DOMAIN</code>: 该实例本地用户 acct 标识的域名，Webfinger account URI，形如 <code>user@host</code></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="medium">Medium<a href="#medium" class="hash-link" aria-label="Medium的直接链接" title="Medium的直接链接">​</a></h3>
+<p>打开控制台，复制 Cookie（理论上只需要 uid 和 sid 即可）</p>
+<ul>
+<li><code>MEDIUM_ARTICLE_COOKIE</code>：请求全文时使用的 Cookie，存在活跃的 Member 订阅时可获取付费内容全文</li>
+<li><code>MEDIUM_COOKIE_{username}</code>：对应 username 的用户的 Cookie，个性推荐相关路由需要</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="miniflux">MiniFlux<a href="#miniflux" class="hash-link" aria-label="MiniFlux的直接链接" title="MiniFlux的直接链接">​</a></h3>
+<ul>
+<li><code>MINIFLUX_INSTANCE</code>： 用户所用的实例，默认为 MiniFlux 官方提供的 <a href="https://reader.miniflux.app" target="_blank" rel="noopener noreferrer">付费服务地址</a></li>
+<li><code>MINIFLUX_TOKEN</code>: 用户的 API 密钥，请登录所用实例后于 <code>设置</code> -&gt; <code>API 密钥</code> -&gt; <code>创建一个新的 API 密钥</code> 处获取</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="nga-bbs">NGA BBS<a href="#nga-bbs" class="hash-link" aria-label="NGA BBS的直接链接" title="NGA BBS的直接链接">​</a></h3>
+<p>用于获取帖子内文</p>
+<ul>
+<li><code>NGA_PASSPORT_UID</code>: 对应 cookie 中的 <code>ngaPassportUid</code>.</li>
+<li><code>NGA_PASSPORT_CID</code>: 对应 cookie 中的 <code>ngaPassportCid</code>.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="nhentai-torrent">nhentai torrent<a href="#nhentai-torrent" class="hash-link" aria-label="nhentai torrent的直接链接" title="nhentai torrent的直接链接">​</a></h3>
+<p><a href="https://nhentai.net/register/" target="_blank" rel="noopener noreferrer">注册地址</a></p>
+<ul>
+<li><code>NHENTAI_USERNAME</code>: nhentai 用户名或邮箱</li>
+<li><code>NHENTAI_PASSWORD</code>: nhentai 密码</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="notion">Notion<a href="#notion" class="hash-link" aria-label="Notion的直接链接" title="Notion的直接链接">​</a></h3>
+<ul>
+<li><code>NOTION_TOKEN</code>: Notion 内部集成 Token，请按照 <a href="https://developers.notion.com/docs/authorization#internal-integration-auth-flow-set-up" target="_blank" rel="noopener noreferrer">Notion 官方指引</a> 申请 Token</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="pianyuan">pianyuan<a href="#pianyuan" class="hash-link" aria-label="pianyuan的直接链接" title="pianyuan的直接链接">​</a></h3>
+<p><a href="https://pianyuan.org" target="_blank" rel="noopener noreferrer">注册地址</a></p>
+<ul>
+<li><code>PIANYUAN_COOKIE</code>: 对应 cookie 中的 <code>py_loginauth</code>, 例：PIANYUAN_COOKIE=&#x27;py_loginauth=xxxxxxxxxx&#x27;</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="pixiv">pixiv<a href="#pixiv" class="hash-link" aria-label="pixiv的直接链接" title="pixiv的直接链接">​</a></h3>
+<p><a href="https://accounts.pixiv.net/signup" target="_blank" rel="noopener noreferrer">注册地址</a></p>
+<ul>
+<li><code>PIXIV_REFRESHTOKEN</code>: Pixiv Refresh Token, 请参考 <a href="https://gist.github.com/ZipFile/c9ebedb224406f4f11845ab700124362" target="_blank" rel="noopener noreferrer">此文</a> 获取，或自行对客户端抓包获取</li>
+<li><code>PIXIV_BYPASS_CDN</code>: 绕过 Pixiv 前置的 Cloudflare CDN, 使用<code>PIXIV_BYPASS_HOSTNAME</code>指示的 IP 地址访问 Pixiv API, 可以解决因 Cloudflare 机器人验证导致的登录失败问题，默认关闭，设置 true 或 1 开启</li>
+<li><code>PIXIV_BYPASS_HOSTNAME</code>: Pixiv 源站的主机名或 IP 地址，主机名会被解析为 IPv4 地址，默认为<code>public-api.secure.pixiv.net</code>；仅在<code>PIXIV_BYPASS_CDN</code>开启时生效</li>
+<li><code>PIXIV_BYPASS_DOH</code>: 用于解析 <code>PIXIV_BYPASS_HOSTNAME</code> 的 DoH 端点 URL，需要兼容 Cloudflare 或 Google 的 DoH 服务的 JSON 查询格式，默认为 <code>https://1.1.1.1/dns-query</code></li>
+<li><code>PIXIV_IMG_PROXY</code>: 用于图片地址的代理，因为 pixiv 图片有防盗链，默认为 <code>https://i.pixiv.re</code></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="pixiv-fanbox">pixiv fanbox<a href="#pixiv-fanbox" class="hash-link" aria-label="pixiv fanbox的直接链接" title="pixiv fanbox的直接链接">​</a></h3>
+<p>用于获取付费内容</p>
+<ul>
+<li><code>FANBOX_SESSION_ID</code>: 对应 cookies 中的<code>FANBOXSESSID</code>。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="saraba1st">Saraba1st<a href="#saraba1st" class="hash-link" aria-label="Saraba1st的直接链接" title="Saraba1st的直接链接">​</a></h3>
+<p>用于获取帖子里的图片</p>
+<ul>
+<li><code>SARABA1ST_COOKIE</code>: 对应网页端的 Cookie。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="sci-hub">Sci-hub<a href="#sci-hub" class="hash-link" aria-label="Sci-hub的直接链接" title="Sci-hub的直接链接">​</a></h3>
+<p>用于科学期刊路由。</p>
+<ul>
+<li><code>SCIHUB_HOST</code>: 可访问的 sci-hub 镜像地址，默认为 <code>https://sci-hub.se</code>。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="spotify">Spotify<a href="#spotify" class="hash-link" aria-label="Spotify的直接链接" title="Spotify的直接链接">​</a></h3>
+<p><a href="https://developer.spotify.com" target="_blank" rel="noopener noreferrer">注册地址</a></p>
+<ul>
+<li><code>SPOTIFY_CLIENT_ID</code>: Spotify 应用的 client ID</li>
+<li><code>SPOTIFY_CLIENT_SECRET</code>: Spotify 应用的 client secret</li>
+</ul>
+<p>用户相关路由</p>
+<ul>
+<li><code>SPOTIFY_REFRESHTOKEN</code>：用户在此 Spotify 应用的 refresh token。可以利用 <a href="https://gist.github.com/outloudvi/d1bbeb5e989db5385384a223a7263744" target="_blank" rel="noopener noreferrer">此 gist</a> 获取。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="telegram">Telegram<a href="#telegram" class="hash-link" aria-label="Telegram的直接链接" title="Telegram的直接链接">​</a></h3>
+<p>贴纸包路由：<a href="https://telegram.org/blog/bot-revolution" target="_blank" rel="noopener noreferrer">Telegram 机器人</a></p>
+<ul>
+<li><code>TELEGRAM_TOKEN</code>: Telegram 机器人 token</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="twitter">Twitter<a href="#twitter" class="hash-link" aria-label="Twitter的直接链接" title="Twitter的直接链接">​</a></h3>
+<p>鉴于 Twitter 和其 API 访问的最新变化，已经设计了一种新的匿名访问 Twitter 的方法。该方法涉及使用在通过 Android 应用程序进行注册流程时创建的临时访客账户。</p>
+<p>详细信息请参阅 <a href="https://github.com/zedeus/nitter/wiki/Guest-Account-Branch-Deployment" target="_blank" rel="noopener noreferrer">Nitter - Guest Account Branch Deployment</a> 和 <a href="https://github.com/zedeus/nitter/issues/983" target="_blank" rel="noopener noreferrer">zedeus/nitter#983</a>。</p>
+<p>另外我们也准备了一个 Node.js 脚本来帮助你使用代理批量创建这些 token，<a href="https://github.com/DIYgod/RSSHub/tree/master/scripts/twitter-token/generate.js" target="_blank" rel="noopener noreferrer">请点击这里</a>。</p>
+<ul>
+<li><code>TWITTER_OAUTH_TOKEN</code>: 支持多个 key，用英文逗号 <code>,</code> 隔开</li>
+<li><code>TWITTER_OAUTH_TOKEN_SECRET</code>: 支持多个 key，用英文逗号 <code>,</code> 隔开</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="wordpress">Wordpress<a href="#wordpress" class="hash-link" aria-label="Wordpress的直接链接" title="Wordpress的直接链接">​</a></h3>
+<ul>
+<li>
+<p><code>WORDPRESS_CDN</code>: 用于中转 http 图片链接。可供考虑的服务见下表：</p>
+<table><thead><tr><th>url</th><th>backbone</th></tr></thead><tbody><tr><td><a href="https://imageproxy.pimg.tw/resize?url=" target="_blank" rel="noopener noreferrer">https://imageproxy.pimg.tw/resize?url=</a></td><td>akamai</td></tr><tr><td><a href="https://images.weserv.nl/?url=" target="_blank" rel="noopener noreferrer">https://images.weserv.nl/?url=</a></td><td>cloudflare</td></tr><tr><td><a href="https://pic1.xuehuaimg.com/proxy" target="_blank" rel="noopener noreferrer">https://pic1.xuehuaimg.com/proxy</a></td><td>cloudflare</td></tr><tr><td><a href="https://cors.netnr.workers.dev" target="_blank" rel="noopener noreferrer">https://cors.netnr.workers.dev</a></td><td>cloudflare</td></tr><tr><td><a href="https://netnr-proxy.openode.io" target="_blank" rel="noopener noreferrer">https://netnr-proxy.openode.io</a></td><td>digitalocean</td></tr></tbody></table>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="youtube">YouTube<a href="#youtube" class="hash-link" aria-label="YouTube的直接链接" title="YouTube的直接链接">​</a></h3>
+<p><a href="https://console.developers.google.com/" target="_blank" rel="noopener noreferrer">申请地址</a></p>
+<ul>
+<li>全部路由</li>
+<li><code>YOUTUBE_KEY</code>: YouTube API Key，支持多个 key，用英文逗号 <code>,</code> 隔开</li>
+<li>订阅列表路由额外设置</li>
+<li><code>YOUTUBE_CLIENT_ID</code>: YouTube API 的 OAuth 2.0 客户端 ID</li>
+<li><code>YOUTUBE_CLIENT_SECRET</code>: YouTube API 的 OAuth 2.0 客户端 Secret</li>
+<li><code>YOUTUBE_REFRESH_TOKEN</code>: YouTube API 的 OAuth 2.0 客户端 Refresh Token。可以按照 <a href="https://gist.github.com/Kurukshetran/5904e8cb2361623498481f4a9a1338aa" target="_blank" rel="noopener noreferrer">此 gist</a> 获取。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="zodgame">ZodGame<a href="#zodgame" class="hash-link" aria-label="ZodGame的直接链接" title="ZodGame的直接链接">​</a></h3>
+<ul>
+<li><code>ZODGAME_COOKIE</code>: ZodGame 登录后的 Cookie 值</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="北京大学">北京大学<a href="#北京大学" class="hash-link" aria-label="北京大学的直接链接" title="北京大学的直接链接">​</a></h3>
+<p>用于北大未名 BBS 全站十大</p>
+<ul>
+<li><code>PKUBBS_COOKIE</code>: BBS 注册用户登录后的 Cookie 值，获取方式：<!-- -->
+<ol>
+<li>登录后打开论坛首页</li>
+<li>打开控制台， 刷新</li>
+<li>找到 <code>https://bbs.pku.edu.cn/v2/home.php</code> 请求</li>
+<li>找到请求头中的 Cookie</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="滴答清单">滴答清单<a href="#滴答清单" class="hash-link" aria-label="滴答清单的直接链接" title="滴答清单的直接链接">​</a></h3>
+<ul>
+<li><code>DIDA365_USERNAME</code>: 滴答清单用户名</li>
+<li><code>DIDA365_PASSWORD</code>: 滴答清单密码</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="端传媒设置">端传媒设置<a href="#端传媒设置" class="hash-link" aria-label="端传媒设置的直接链接" title="端传媒设置的直接链接">​</a></h3>
+<p>用于获取付费内容全文</p>
+<ul>
+<li>
+<p><code>INITIUM_BEARER_TOKEN</code>: 端传媒 Web 版认证 token。获取方式：登陆后打开端传媒站内任意页面，打开浏览器开发者工具中 “网络”(Network) 选项卡，筛选 URL 找到任一个地址为<code>api.initium.com</code>开头的请求，点击检查其 “消息头”，在 “请求头” 中找到<code>Authorization</code>字段，将其值复制填入配置即可。你的配置应该形如<code>INITIUM_BEARER_TOKEN: &#x27;Bearer eyJxxxx......xx_U8&#x27;</code>。使用 token 部署的好处是避免占据登陆设备数的额度，但这个 token 一般有效期为两周，因此只可作临时测试使用。</p>
+</li>
+<li>
+<p><code>INITIUM_IAP_RECEIPT</code>: 端传媒 iOS 版内购回执认证 token。获取方式：登陆后打开端传媒 iOS app 内任意页面，打开抓包工具，筛选 URL 找到任一个地址为<code>api.initium.com</code>开头的请求，点击检查其 “消息头”，在 “请求头” 中找到<code>X-IAP-Receipt</code>字段，将其值复制填入配置即可。你的配置应该形如<code>INITIUM_IAP_RECEIPT: &#x27;ef81dee9e4e2fe084a0af1ea82da2f7b16e75f756db321618a119fa62b52550e&#x27;</code>。</p>
+</li>
+</ul>
+<p>Web 版认证 token 和 iOS 内购回执认证 token 只需选择其一填入即可。你也可选择直接在环境设置中填写明文的用户名和密码：</p>
+<ul>
+<li><code>INITIUM_USERNAME</code>: 端传媒用户名 （邮箱）</li>
+<li><code>INITIUM_PASSWORD</code>: 端传媒密码</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="豆瓣">豆瓣<a href="#豆瓣" class="hash-link" aria-label="豆瓣的直接链接" title="豆瓣的直接链接">​</a></h3>
+<p>用于想看</p>
+<ul>
+<li><code>DOUBAN_COOKIE</code>: 豆瓣登陆后的 Cookie 值</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="饭否">饭否<a href="#饭否" class="hash-link" aria-label="饭否的直接链接" title="饭否的直接链接">​</a></h3>
+<p><a href="https://github.com/FanfouAPI/FanFouAPIDoc/wiki/Oauth" target="_blank" rel="noopener noreferrer">申请地址</a></p>
+<ul>
+<li><code>FANFOU_CONSUMER_KEY</code>: 饭否 Consumer Key</li>
+<li><code>FANFOU_CONSUMER_SECRET</code>: 饭否 Consumer Secret</li>
+<li><code>FANFOU_USERNAME</code>: 饭否登录用户名、邮箱、手机号</li>
+<li><code>FANFOU_PASSWORD</code>: 饭否密码</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="和风天气">和风天气<a href="#和风天气" class="hash-link" aria-label="和风天气的直接链接" title="和风天气的直接链接">​</a></h3>
+<p><a href="https://id.qweather.com/#/register?redirect=https%3A%2F%2Fconsole.qweather.com" target="_blank" rel="noopener noreferrer">申请地址</a></p>
+<ul>
+<li><code>HEFENG_KEY</code>:API<!-- --> key</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="今日热榜">今日热榜<a href="#今日热榜" class="hash-link" aria-label="今日热榜的直接链接" title="今日热榜的直接链接">​</a></h3>
+<ul>
+<li><code>TOPHUB_COOKIE</code>: 今日热榜登录后的 cookie，目前只需要 <code>itc_center_user=...</code> 以获取原始链接</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="南方周末">南方周末<a href="#南方周末" class="hash-link" aria-label="南方周末的直接链接" title="南方周末的直接链接">​</a></h3>
+<p>付费全文</p>
+<ul>
+<li><code>INFZM_COOKIE</code>: infzm 账户登陆后的 cookie，目前只需要 <code>passport_session=...</code> 即可获取全文</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="轻小说文库">轻小说文库<a href="#轻小说文库" class="hash-link" aria-label="轻小说文库的直接链接" title="轻小说文库的直接链接">​</a></h3>
+<ul>
+<li><code>WENKU8_COOKIE</code>: 登陆轻小说文库后的 cookie</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="色花堂">色花堂<a href="#色花堂" class="hash-link" aria-label="色花堂的直接链接" title="色花堂 的直接链接">​</a></h3>
+<ul>
+<li><code>SEHUATANG_COOKIE</code>: 登陆色花堂后的 cookie 值。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="邮箱-邮件列表路由">邮箱 邮件列表路由<a href="#邮箱-邮件列表路由" class="hash-link" aria-label="邮箱 邮件列表路由的直接链接" title="邮箱 邮件列表路由的直接链接">​</a></h3>
+<ul>
+<li>
+<p><code>EMAIL_CONFIG_{email}</code>: 邮箱设置，替换 <code>{email}</code> 为 邮箱账号，邮件账户的 <code>@</code> 与 <code>.</code> 替换为 <code>_</code>，例如 <code>EMAIL_CONFIG_xxx_qq_com</code>。Linux 内容格式为 <code>password=密码&amp;host=服务器&amp;port=端口</code>，docker 内容格式为 <code>password=密码&amp;host=服务器&amp;port=端口</code>，例如：</p>
+</li>
+<li>
+<p>Linux 环境变量：<code>EMAIL_CONFIG_xxx_qq_com=&quot;password=123456&amp;host=imap.qq.com&amp;port=993&quot;</code></p>
+</li>
+<li>
+<p>docker 环境变量：<code>EMAIL_CONFIG_xxx_qq_com=password=123456&amp;host=imap.qq.com&amp;port=993</code>，请勿添加引号 <code>&#x27;</code>，<code>&quot;</code>。</p>
+</li>
+<li>
+<p>注意：邮箱的路由不支持使用 socks5h 的代理，主要是受 <code>ImapFlow</code> 这个第三方库的限制，使用的时候需要注意。</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="网易云歌单">网易云歌单<a href="#网易云歌单" class="hash-link" aria-label="网易云歌单的直接链接" title="网易云歌单的直接链接">​</a></h3>
+<p>用于歌单及听歌排行</p>
+<ul>
+<li><code>NCM_COOKIES</code>: 网易云音乐登陆后的 cookie 值。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="微博">微博<a href="#微博" class="hash-link" aria-label="微博的直接链接" title="微博的直接链接">​</a></h3>
+<p>用于个人时间线路由</p>
+<p><a href="https://open.weibo.com/connect" target="_blank" rel="noopener noreferrer">申请地址</a></p>
+<ul>
+<li><code>WEIBO_APP_KEY</code>: 微博 App Key</li>
+<li><code>WEIBO_APP_SECRET</code>: 微博 App Secret</li>
+<li><code>WEIBO_REDIRECT_URL</code>: 微博登录授权回调地址，默认为 <code>RSSHub 地址/weibo/timeline/0</code>，自定义回调地址请确保最后可以转跳到 <code>RSSHub 地址/weibo/timeline/0?code=xxx</code></li>
+</ul>
+<p>用于自定义分组</p>
+<ul>
+<li><code>WEIBO_COOKIES</code>: 用户访问网页微博时所使用的 cookie, 获取方式：<!-- -->
+<ol>
+<li>打开并登录 <a href="https://m.weibo.cn" target="_blank" rel="noopener noreferrer">https://m.weibo.cn</a> （确保打开页面为手机版，如果强制跳转电脑端可尝试使用可更改 UserAgent 的浏览器插件）</li>
+<li>按下<code>F12</code>打开控制台，切换至<code>Network（网络）</code>面板</li>
+<li>在该网页切换至任意关注分组，并在面板打开最先捕获到的请求 （该情形下捕获到的请求路径应包含<code>/feed/group</code>）</li>
+<li>查看该请求的<code>Headers（请求头）</code>, 找到<code>Cookie</code>字段并复制内容</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="小宇宙">小宇宙<a href="#小宇宙" class="hash-link" aria-label="小宇宙的直接链接" title="小宇宙的直接链接">​</a></h3>
+<p>需要 App 登陆后抓包获取相应数据。</p>
+<ul>
+<li><code>XIAOYUZHOU_ID</code>: 即数据包中的 <code>x-jike-device-id</code>。</li>
+<li><code>XIAOYUZHOU_TOKEN</code>: 即数据包中的 <code>x-jike-refresh-token</code>。</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="新榜">新榜<a href="#新榜" class="hash-link" aria-label="新榜的直接链接" title="新榜的直接链接">​</a></h3>
+<ul>
+<li><code>NEWRANK_COOKIE</code>: 登陆后的 COOKIE 值，其中 token 是必要的，其他可删除</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="喜马拉雅">喜马拉雅<a href="#喜马拉雅" class="hash-link" aria-label="喜马拉雅的直接链接" title="喜马拉雅的直接链接">​</a></h3>
+<ul>
+<li><code>XIMALAYA_TOKEN</code>: 对应 cookie 中的 <code>1&amp;_token</code>，获取方式：<!-- -->
+<ol>
+<li>登陆喜马拉雅网页版</li>
+<li>打开控制台，刷新</li>
+<li>查找名称为<code>1&amp;_token</code>的<code>cookie</code>，其内容即为<code>XIMALAYA_TOKEN</code>的值（即在<code>cookie</code> 中查找 <code>1&amp;_token=***;</code>，并设置 <code>XIMALAYA_TOKEN = ***</code>）</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_eil9" id="知乎用户">知乎用户<a href="#知乎用户" class="hash-link" aria-label="知乎用户的直接链接" title="知乎用户的直接链接">​</a></h3>
+<p>用于用户关注时间线</p>
+<ul>
+<li><code>ZHIHU_COOKIES</code>: 知乎登录后的 cookie 值。<!-- -->
+<ol>
+<li>可以在知乎网页版的一些请求的请求头中找到，如 <code>GET /moments</code> 请求头中的 <code>cookie</code> 值。</li>
+</ol>
+</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/DIYgod/RSSHub/blob/master/website/docs/install/config.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_wSql" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>编辑此页</a></div><div class="col lastUpdated_Yjmj"><span class="theme-last-updated">最后<!-- -->由 <b>Nano</b> <!-- -->于 <b><time datetime="2024-01-08T05:48:20.000Z">2024年1月8日</time></b> <!-- -->更新</span></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/zh/install/"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">部署</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_iWaH thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#网络配置" class="table-of-contents__link toc-highlight">网络配置</a></li><li><a href="#跨域请求" class="table-of-contents__link toc-highlight">跨域请求</a></li><li><a href="#缓存配置" class="table-of-contents__link toc-highlight">缓存配置</a></li><li><a href="#代理配置" class="table-of-contents__link toc-highlight">代理配置</a><ul><li><a href="#代理-uri" class="table-of-contents__link toc-highlight">代理 URI</a></li><li><a href="#代理选项" class="table-of-contents__link toc-highlight">代理选项</a></li><li><a href="#反向代理" class="table-of-contents__link toc-highlight">反向代理</a></li></ul></li><li><a href="#用户认证" class="table-of-contents__link toc-highlight">用户认证</a></li><li><a href="#访问控制配置" class="table-of-contents__link toc-highlight">访问控制配置</a><ul><li><a href="#允许清单拒绝清单" class="table-of-contents__link toc-highlight">允许清单/拒绝清单</a></li><li><a href="#访问密钥--码" class="table-of-contents__link toc-highlight">访问密钥 / 码</a></li></ul></li><li><a href="#日志配置" class="table-of-contents__link toc-highlight">日志配置</a></li><li><a href="#图片处理" class="table-of-contents__link toc-highlight">图片处理</a></li><li><a href="#功能特性" class="table-of-contents__link toc-highlight">功能特性</a></li><li><a href="#其他应用配置" class="table-of-contents__link toc-highlight">其他应用配置</a></li><li><a href="#route-specific-configurations" class="table-of-contents__link toc-highlight">部分 RSS 模块配置</a><ul><li><a href="#4399-论坛" class="table-of-contents__link toc-highlight">4399 论坛</a></li><li><a href="#bilibili" class="table-of-contents__link toc-highlight">bilibili</a></li><li><a href="#bitbucket" class="table-of-contents__link toc-highlight">Bitbucket</a></li><li><a href="#btbyr" class="table-of-contents__link toc-highlight">BTBYR</a></li><li><a href="#bupt" class="table-of-contents__link toc-highlight">BUPT</a></li><li><a href="#civitai" class="table-of-contents__link toc-highlight">Civitai</a></li><li><a href="#discourse" class="table-of-contents__link toc-highlight">Discourse</a></li><li><a href="#discuz" class="table-of-contents__link toc-highlight">Discuz</a></li><li><a href="#disqus" class="table-of-contents__link toc-highlight">Disqus</a></li><li><a href="#e-hentai" class="table-of-contents__link toc-highlight">E-Hentai</a></li><li><a href="#fantia" class="table-of-contents__link toc-highlight">Fantia</a></li><li><a href="#gitee" class="table-of-contents__link toc-highlight">Gitee</a></li><li><a href="#github" class="table-of-contents__link toc-highlight">GitHub</a></li><li><a href="#google-fonts" class="table-of-contents__link toc-highlight">Google Fonts</a></li><li><a href="#instagram" class="table-of-contents__link toc-highlight">Instagram</a></li><li><a href="#iwara" class="table-of-contents__link toc-highlight">Iwara</a></li><li><a href="#lastfm" class="table-of-contents__link toc-highlight">Last.fm</a></li><li><a href="#lightnovelus" class="table-of-contents__link toc-highlight">LightNovel.us</a></li><li><a href="#mastodon" class="table-of-contents__link toc-highlight">Mastodon</a></li><li><a href="#medium" class="table-of-contents__link toc-highlight">Medium</a></li><li><a href="#miniflux" class="table-of-contents__link toc-highlight">MiniFlux</a></li><li><a href="#nga-bbs" class="table-of-contents__link toc-highlight">NGA BBS</a></li><li><a href="#nhentai-torrent" class="table-of-contents__link toc-highlight">nhentai torrent</a></li><li><a href="#notion" class="table-of-contents__link toc-highlight">Notion</a></li><li><a href="#pianyuan" class="table-of-contents__link toc-highlight">pianyuan</a></li><li><a href="#pixiv" class="table-of-contents__link toc-highlight">pixiv</a></li><li><a href="#pixiv-fanbox" class="table-of-contents__link toc-highlight">pixiv fanbox</a></li><li><a href="#saraba1st" class="table-of-contents__link toc-highlight">Saraba1st</a></li><li><a href="#sci-hub" class="table-of-contents__link toc-highlight">Sci-hub</a></li><li><a href="#spotify" class="table-of-contents__link toc-highlight">Spotify</a></li><li><a href="#telegram" class="table-of-contents__link toc-highlight">Telegram</a></li><li><a href="#twitter" class="table-of-contents__link toc-highlight">Twitter</a></li><li><a href="#wordpress" class="table-of-contents__link toc-highlight">Wordpress</a></li><li><a href="#youtube" class="table-of-contents__link toc-highlight">YouTube</a></li><li><a href="#zodgame" class="table-of-contents__link toc-highlight">ZodGame</a></li><li><a href="#北京大学" class="table-of-contents__link toc-highlight">北京大学</a></li><li><a href="#滴答清单" class="table-of-contents__link toc-highlight">滴答清单</a></li><li><a href="#端传媒设置" class="table-of-contents__link toc-highlight">端传媒设置</a></li><li><a href="#豆瓣" class="table-of-contents__link toc-highlight">豆瓣</a></li><li><a href="#饭否" class="table-of-contents__link toc-highlight">饭否</a></li><li><a href="#和风天气" class="table-of-contents__link toc-highlight">和风天气</a></li><li><a href="#今日热榜" class="table-of-contents__link toc-highlight">今日热榜</a></li><li><a href="#南方周末" class="table-of-contents__link toc-highlight">南方周末</a></li><li><a href="#轻小说文库" class="table-of-contents__link toc-highlight">轻小说文库</a></li><li><a href="#色花堂" class="table-of-contents__link toc-highlight">色花堂</a></li><li><a href="#邮箱-邮件列表路由" class="table-of-contents__link toc-highlight">邮箱 邮件列表路由</a></li><li><a href="#网易云歌单" class="table-of-contents__link toc-highlight">网易云歌单</a></li><li><a href="#微博" class="table-of-contents__link toc-highlight">微博</a></li><li><a href="#小宇宙" class="table-of-contents__link toc-highlight">小宇宙</a></li><li><a href="#新榜" class="table-of-contents__link toc-highlight">新榜</a></li><li><a href="#喜马拉雅" class="table-of-contents__link toc-highlight">喜马拉雅</a></li><li><a href="#知乎用户" class="table-of-contents__link toc-highlight">知乎用户</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/zh/">指南</a></li><li class="footer__item"><a class="footer__link-item" href="/zh/joinus/quick-start">参与我们</a></li><li class="footer__item"><a class="footer__link-item" href="/zh/install">部署</a></li><li class="footer__item"><a class="footer__link-item" href="/zh/support">支持 RSSHub</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/DIYgod/RSSHub" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_AcqV"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://t.me/rsshub" target="_blank" rel="noopener noreferrer" class="footer__link-item">Telegram Group<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_AcqV"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://t.me/awesomeRSSHub" target="_blank" rel="noopener noreferrer" class="footer__link-item">Telegram Channel<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_AcqV"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://diygod.cc" target="_blank" rel="noopener noreferrer" class="footer__link-item">关于作者 DIYgod</a></li><li class="footer__item"><a href="https://github.com/DIYgod/RSSHub-Radar" target="_blank" rel="noopener noreferrer" class="footer__link-item">RSSHub Radar - 快速发现和订阅 RSS<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_AcqV"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://xlog.app" target="_blank" rel="noopener noreferrer" class="footer__link-item">xLog - 书写在区块链上的开源创作社区<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_AcqV"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 RSSHub.</div></div></div></footer></div>
+</body>
+</html>
