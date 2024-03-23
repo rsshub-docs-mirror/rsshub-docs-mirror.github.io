@@ -14,26 +14,26 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
-        repository: DIYgod/RSSHub
-        ref: master
+        repository: RSSNext/rsshub-docs
+        ref: main
 
     - name: Install pnpm
-      run: |
-        npm install -g pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
 
     - name: Build RSSHub Docs
-      working-directory: website
       run: |
         pnpm install
-        pnpm build
+        pnpm docs:build
 
     - name: Deploy to GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2
       with:
         target_branch: gh-pages
-        build_dir: website/build
+        build_dir: .vitepress\dist
         keep_history: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
