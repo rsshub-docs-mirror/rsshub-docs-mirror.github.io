@@ -1,0 +1,49 @@
+name: RSSHub Docs
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@latest
+      with:
+        repository: RSSNext/rsshub-docs
+        ref: main
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@latest
+      with:
+        version: 8
+
+    - name: Build RSSHub Docs
+      run: |
+        pnpm install
+        pnpm docs:build
+
+    - name: Upload RSSHub Docs artifact
+      uses: actions/upload-pages-artifact@latest
+      with:
+        path: ./.vitepress/dist
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@latest
