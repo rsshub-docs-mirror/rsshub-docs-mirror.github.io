@@ -14,13 +14,13 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@latest
+      uses: actions/checkout@v4
       with:
         repository: RSSNext/rsshub-docs
         ref: main
 
     - name: Install pnpm
-      uses: pnpm/action-setup@latest
+      uses: pnpm/action-setup@v3
       with:
         version: 8
 
@@ -30,7 +30,7 @@ jobs:
         pnpm docs:build
 
     - name: Upload RSSHub Docs artifact
-      uses: actions/upload-pages-artifact@latest
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./.vitepress/dist
 
@@ -46,4 +46,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@latest
+        uses: actions/deploy-pages@v4
