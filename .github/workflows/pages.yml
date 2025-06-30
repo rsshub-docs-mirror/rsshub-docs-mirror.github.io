@@ -34,16 +34,11 @@ jobs:
       with:
         path: ./.vitepress/dist
 
-  deploy:
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: gh-pages
+        build_dir: .vitepress/dist
+        keep_history: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
