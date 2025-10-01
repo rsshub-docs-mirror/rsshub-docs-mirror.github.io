@@ -20,14 +20,19 @@ jobs:
         ref: main
 
     - name: Install pnpm
-      uses: pnpm/action-setup@v3
+      uses: pnpm/action-setup@v4
+
+    - name: Use Node.js Active LTS
+      uses: actions/setup-node@v5
       with:
-        version: 8
+        node-version: lts/*
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install
 
     - name: Build RSSHub Docs
-      run: |
-        pnpm install
-        pnpm docs:build
+      run: pnpm docs:build
 
     - name: Upload RSSHub Docs artifact
       uses: actions/upload-pages-artifact@v3
@@ -41,4 +46,5 @@ jobs:
         build_dir: .vitepress/dist
         keep_history: false
       env:
+
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
