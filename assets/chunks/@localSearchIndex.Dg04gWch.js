@@ -1,0 +1,1 @@
+import{t as e}from"./framework.CwsRIRiQ.js";var t={root:()=>e(()=>import(`./@localSearchIndexroot.Dd-dRS7y.js`),[]),zh:()=>e(()=>import(`./@localSearchIndexzh.6M1oekeM.js`),[])};export{t as default};

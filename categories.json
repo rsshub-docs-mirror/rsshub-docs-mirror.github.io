@@ -1,0 +1,152 @@
+[
+  {
+    "id": "popular",
+    "icon": "🌟",
+    "en": "Popular",
+    "zh": "热门"
+  },
+  {
+    "id": "social-media",
+    "icon": "💬",
+    "en": "Social Media",
+    "zh": "社交媒体"
+  },
+  {
+    "id": "new-media",
+    "icon": "📱",
+    "en": "New media",
+    "zh": "新媒体"
+  },
+  {
+    "id": "traditional-media",
+    "icon": "📰",
+    "en": "Traditional media",
+    "zh": "传统媒体"
+  },
+  {
+    "id": "bbs",
+    "icon": "💬️",
+    "en": "BBS",
+    "zh": "论坛"
+  },
+  {
+    "id": "blog",
+    "icon": "🖊️️",
+    "en": "Blog",
+    "zh": "博客"
+  },
+  {
+    "id": "programming",
+    "icon": "💻",
+    "en": "Programming",
+    "zh": "编程"
+  },
+  {
+    "id": "design",
+    "icon": "🎨️",
+    "en": "Design",
+    "zh": "设计"
+  },
+  {
+    "id": "live",
+    "icon": "🎥",
+    "en": "Live",
+    "zh": "直播"
+  },
+  {
+    "id": "multimedia",
+    "icon": "🔊",
+    "en": "Multimedia",
+    "zh": "音视频"
+  },
+  {
+    "id": "picture",
+    "icon": "🖼️",
+    "en": "Picture",
+    "zh": "图片"
+  },
+  {
+    "id": "anime",
+    "icon": "🎨️",
+    "en": "ACG",
+    "zh": "二次元"
+  },
+  {
+    "id": "program-update",
+    "icon": "🔄",
+    "en": "Application Updates",
+    "zh": "程序更新"
+  },
+  {
+    "id": "university",
+    "icon": "🎓",
+    "en": "University",
+    "zh": "大学通知"
+  },
+  {
+    "id": "forecast",
+    "icon": "❗️",
+    "en": "Forecast and Alerts",
+    "zh": "预报预警"
+  },
+  {
+    "id": "travel",
+    "icon": "🛫",
+    "en": "Travel",
+    "zh": "出行旅游"
+  },
+  {
+    "id": "shopping",
+    "icon": "🛍️",
+    "en": "Shopping",
+    "zh": "购物"
+  },
+  {
+    "id": "game",
+    "icon": "🎮",
+    "en": "Gaming",
+    "zh": "游戏"
+  },
+  {
+    "id": "reading",
+    "icon": "📚",
+    "en": "Reading",
+    "zh": "阅读"
+  },
+  {
+    "id": "government",
+    "icon": "📢",
+    "en": "Government",
+    "zh": "政务消息"
+  },
+  {
+    "id": "study",
+    "icon": "📖",
+    "en": "Study",
+    "zh": "学习"
+  },
+  {
+    "id": "journal",
+    "icon": "🔬",
+    "en": "Scientific Journal",
+    "zh": "科学期刊"
+  },
+  {
+    "id": "finance",
+    "icon": "💰",
+    "en": "Finance",
+    "zh": "金融"
+  },
+  {
+    "id": "sport",
+    "icon": "⚽",
+    "en": "Sport",
+    "zh": "体育"
+  },
+  {
+    "id": "other",
+    "icon": "🔍",
+    "en": "Uncategorized",
+    "zh": "其他"
+  }
+]
