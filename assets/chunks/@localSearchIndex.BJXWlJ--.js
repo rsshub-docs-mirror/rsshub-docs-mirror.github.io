@@ -1,0 +1,1 @@
+import{t as e}from"./framework.CjQOYpa_.js";var t={root:()=>e(()=>import(`./@localSearchIndexroot.DNConRoZ.js`),[]),zh:()=>e(()=>import(`./@localSearchIndexzh.Bqqc4Siz.js`),[])};export{t as default};
