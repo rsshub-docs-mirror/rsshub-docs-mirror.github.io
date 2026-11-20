@@ -1,0 +1,1 @@
+var e=`/img/sponsors/proxy-seller.png`;export{e as t};
