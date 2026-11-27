@@ -1,0 +1,1 @@
+import{t as e}from"./framework.CFonQ9VZ.js";var t={root:()=>e(()=>import(`./@localSearchIndexroot.DBq_VIN1.js`),[]),zh:()=>e(()=>import(`./@localSearchIndexzh.lale-S0p.js`),[])};export{t as default};
